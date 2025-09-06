@@ -1,11 +1,10 @@
+// src/routes/itemRoutes.js
 import express from 'express';
-import { getItems, addItem, updateItem, deleteItem } from '../controllers/itemController.js';
-
 const router = express.Router();
 
-router.get('/', getItems);
-router.post('/', addItem);
-router.put('/:id', updateItem);
-router.delete('/:id', deleteItem);
+// Example route
+router.get('/', (req, res) => {
+  res.json({ message: 'Items route works!' });
+});
 
-export default router;
+export default router; // ✅ default export
